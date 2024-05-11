@@ -25,7 +25,7 @@ const handleSubSteps = (
           case config.subStepTypes.click:
             await element.click();
             if (subStep.wait_for_new_page) {
-              await waitForNatigation(page);
+              await waitForNatigation(page,automation);
             }
             break;
           case config.subStepTypes.input_text:
