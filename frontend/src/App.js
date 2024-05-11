@@ -10,6 +10,10 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import PontingRoboImage from "../src/images/pngegg_pointing.png";
+
+import ParticlesBg from "particles-bg";
+
 
 function App() {
   useEffect(() => {
@@ -19,12 +23,22 @@ function App() {
   }, []);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        backgroundImage: `url(${PontingRoboImage})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left",
+        minHeight: "100vh",
+      }}
+    >
       <Grid container spacing={1}>
+      <ParticlesBg type="cobweb" bg={true} color="#bdf0ec" />
+
         <Grid item xs={12}>
           <Typography
             variant="h4"
-            style={{ textAlign: "center", marginTop: "150px" }}
+            style={{ textAlign: "center", marginTop: "125px" }}
           >
             Welcome to WebCrafter
           </Typography>
