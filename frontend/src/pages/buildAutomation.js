@@ -175,13 +175,10 @@ function BuildAutomation() {
             onChange={handleMainStepTypeChange}
           >
             <MenuItem value={2}>search for html element by id</MenuItem>
-            <MenuItem value={3}>
-              search for html elements by class name
-            </MenuItem>
             <MenuItem value={4}>
               search for html element by custom query
             </MenuItem>
-            <MenuItem value={5}>click enter btn on page</MenuItem>
+            <MenuItem value={5}>press enter btn on page</MenuItem>
             <MenuItem value={6}>take screenshot of page</MenuItem>
           </Select>
         </FormControl>
@@ -278,6 +275,28 @@ function BuildAutomation() {
                     sx={{ width: "300px" }}
                     onChange={(e) => setURL(e.target.value)}
                   ></TextField>
+
+                  {/* <Typography
+                    variant="h6"
+                    style={{ textAlign: "center", fontStyle: "oblique" }}
+                  >
+                    Keep running settings:
+                  </Typography>
+
+                  <Select
+                    // value={subStepType}
+                    label="sub step type"
+                    // onChange={(e) => {
+                    //   handleSubStepTypeChange(e);
+                    // }}
+                  >
+                    <MenuItem value={1}>every 1 hour</MenuItem>
+                    <MenuItem value={2}>every 4 hours</MenuItem>
+                    <MenuItem value={3}>every day</MenuItem>
+                    <MenuItem value={4}>every week</MenuItem>
+                    <MenuItem value={4}>every month</MenuItem>
+                  </Select> */}
+
                   <Button
                     variant="contained"
                     color="primary"
