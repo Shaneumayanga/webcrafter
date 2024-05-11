@@ -22,6 +22,8 @@ module.exports.getLogsForUser = async (user_id, automation_id) => {
   const logsPerUser = await LogModel.find({
     user_id: new mongoose.Types.ObjectId(user_id),
     automation_id: new mongoose.Types.ObjectId(automation_id),
-  }).sort({ created_at: -1 });
+  })
+    .sort({ created_at: -1 })
+    .limit(15);
   return logsPerUser;
 };
