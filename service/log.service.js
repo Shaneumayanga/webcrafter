@@ -24,6 +24,6 @@ module.exports.getLogsForUser = async (user_id, automation_id) => {
     automation_id: new mongoose.Types.ObjectId(automation_id),
   })
     .sort({ created_at: -1 })
-    .limit(15);
+    .limit(8);
   return logsPerUser;
 };
