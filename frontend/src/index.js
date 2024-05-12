@@ -7,6 +7,7 @@ import Home from "./pages/home";
 import BuildAutomation from "./pages/buildAutomation";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EditAutomation from "./pages/editAutomation";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/build-automation",
-    element : <BuildAutomation/>
-  }
+    element: <BuildAutomation />,
+  },
+  {
+    path: "/edit-automation/:automation_id",
+    element: <EditAutomation />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

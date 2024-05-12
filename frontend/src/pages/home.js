@@ -23,6 +23,7 @@ import {
 
 import Refresh from "@mui/icons-material/Refresh";
 import ViewIcon from "@mui/icons-material/RemoveRedEye";
+import EditIcon from "@mui/icons-material/Edit";
 import ParticlesBg from "particles-bg";
 
 import PlayIcon from "@mui/icons-material/PlayCircle";
@@ -76,9 +77,7 @@ function Home() {
   };
 
   return (
-    <Box
-  
-    >
+    <Box>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography
@@ -164,6 +163,14 @@ function Home() {
                   }}
                 >
                   {automation.keep_running ? <PauseIcon /> : <PlayIcon />}
+                </IconButton>
+
+                <IconButton
+                  onClick={() => {
+                    window.location.href = `/edit-automation/${automation._id}`;
+                  }}
+                >
+                  <EditIcon />
                 </IconButton>
               </CardContent>
             </Card>

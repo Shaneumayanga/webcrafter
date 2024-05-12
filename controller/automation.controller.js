@@ -66,8 +66,7 @@ router
     }
   );
 
-
-  router
+router
   .route("/toggle-automation-keep-running")
   .post(
     middleware.validateBody(validation.toggleAutomationKeepRunning),
@@ -84,5 +83,31 @@ router
     }
   );
 
+router
+  .route("/get-automation-by-id/:automation_id")
+  .get(middleware.validateHeader(), async (req, res) => {
+    try {
+      const data = await automationService.getAutomationId(
+        req.params.automation_id
+      );
+      return successResponse(data, res);
+    } catch (error) {
+      return errorResponse(error, res);
+    }
+  });
+
+router
+  .route("/update_automation_steps")
+  .put(middleware.validateHeader(), async (req, res) => {
+    try {
+      const data = await automationService.updateAutomationSteps(
+        req.body.automation_id,
+        req.body.new_steps
+      );
+      return successResponse(data, res);
+    } catch (error) {
+      return errorResponse(error, res);
+    }
+  });
 
 module.exports = router;

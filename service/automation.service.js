@@ -73,3 +73,21 @@ module.exports.toggleAutomationKeepRunning = async (automation_id) => {
 
   return "not changed";
 };
+
+module.exports.updateAutomationSteps = async (automation_id, new_steps) => {
+  const result = await AutomationModel.updateOne(
+    {
+      _id: new mongoose.Types.ObjectId(automation_id),
+    },
+    {
+      steps: new_steps
+    },
+    {
+      new: true,
+    }
+  );
+  if(result){
+    return "succesfully updated"
+  }
+  return "not updated"
+};

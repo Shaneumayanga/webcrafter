@@ -99,6 +99,32 @@ const apiToggleAutomationkeepRunning = async (automation_id) => {
   }
 };
 
+const apiFetchAutomationData = async (automation_id) => {
+  try {
+    const response = await api.get(
+      `/automation/get-automation-by-id/${automation_id}`,
+      {}
+    );
+    return response.data;
+  } catch (error) {
+    handleError(error);
+    return;
+  }
+};
+
+const apiUpdateAutomationSteps = async (automation_id, new_steps) => {
+  try {
+    const response = await api.put(`/automation/update_automation_steps`, {
+      automation_id: automation_id,
+      new_steps: new_steps,
+    });
+    return response.data;
+  } catch (error) {
+    handleError(error);
+    return;
+  }
+};
+
 export {
   apiLogin,
   apiRegister,
@@ -106,5 +132,7 @@ export {
   getUserAutomations,
   apiRunAutomation,
   apiGetLogsPerAutomation,
-  apiToggleAutomationkeepRunning
+  apiToggleAutomationkeepRunning,
+  apiFetchAutomationData,
+  apiUpdateAutomationSteps,
 };
