@@ -27,6 +27,7 @@ import ParticlesBg from "particles-bg";
 
 import PlayIcon from "@mui/icons-material/PlayCircle";
 import PauseIcon from "@mui/icons-material/PauseCircle";
+import RobotPeekingImage from "../images/robot_peeking.png";
 
 function Home() {
   const [automations, setAutomations] = useState([]);
@@ -75,7 +76,9 @@ function Home() {
   };
 
   return (
-    <Box>
+    <Box
+  
+    >
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography
@@ -137,7 +140,7 @@ function Home() {
                 </Typography>
                 <Button
                   onClick={() => runAutomation(index, automation)}
-                  disabled={automation.is_running || automation.keep_running }
+                  disabled={automation.is_running || automation.keep_running}
                 >
                   Run
                 </Button>
