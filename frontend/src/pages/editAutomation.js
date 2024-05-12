@@ -22,6 +22,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Routes, Route, useParams } from "react-router-dom";
 
 import { apiFetchAutomationData, apiUpdateAutomationSteps } from "../api/api";
+import ParticlesBg from "particles-bg";
 
 function EditAutomation() {
   let { automation_id } = useParams();
@@ -37,8 +38,12 @@ function EditAutomation() {
   };
 
   const handleUpdateBtnClick = async () => {
-      const updateResult = await apiUpdateAutomationSteps(automation_id,automationSteps);
-      alert(JSON.stringify(updateResult));
+    const updateResult = await apiUpdateAutomationSteps(
+      automation_id,
+      automationSteps
+    );
+    alert(JSON.stringify(updateResult));
+    window.location.href = "/home";
   };
 
   useEffect(() => {
@@ -51,6 +56,17 @@ function EditAutomation() {
 
   return (
     <Box>
+      <ParticlesBg type="cobweb" bg={true} color="#bdf0ec" />
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Typography
+            variant="h4"
+            style={{ textAlign: "center", marginTop: "20px" }}
+          >
+            Edit your automation : {automation.name}
+          </Typography>
+        </Grid>
+      </Grid>
       {automationSteps.map((step, index) => {
         return automationSteps[index].step_type !== 1 ? (
           <>
