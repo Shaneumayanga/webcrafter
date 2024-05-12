@@ -21,4 +21,4 @@ module.exports.logTypes = {
 
 //TODO: GET THIS FROM ENV
 
-module.exports.tokenKey = "key123";
+module.exports.tokenKey = process.env.JWT_SECRET || "key123"
