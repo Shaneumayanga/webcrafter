@@ -24,6 +24,7 @@ import ParticlesBg from "particles-bg";
 import uuid from "react-uuid";
 
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import RoboWavingImage from "../images/pngegg_saying_hi.png";
 
 function BuildAutomation() {
   //refractor later
@@ -222,7 +223,6 @@ function BuildAutomation() {
     >
       <Box>
         <ParticlesBg type="cobweb" bg={true} color="#bdf0ec" />
-
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography
@@ -233,7 +233,6 @@ function BuildAutomation() {
             </Typography>
           </Grid>
         </Grid>
-
         <Box
           sx={{
             display: hideBotNameInputs ? "block" : "none",
@@ -310,7 +309,6 @@ function BuildAutomation() {
             </Card>
           </Grid>
         </Box>
-
         <Box
           sx={{
             marginTop: "25px",
@@ -481,7 +479,6 @@ function BuildAutomation() {
             );
           })}
         </Box>
-
         <Box
           sx={{
             display: showPlusBtn ? "block" : "none",
@@ -502,7 +499,6 @@ function BuildAutomation() {
             </IconButton>
           </Grid>
         </Box>
-
         <Box
           sx={{
             display: showPlusBtn ? "block" : "none",
@@ -521,13 +517,21 @@ function BuildAutomation() {
             <Button onClick={handleDoneBtnClick}>Save automation</Button>
           </Grid>
         </Box>
-
-        <Box sx={{ display: hideBotNameInputs ? "none" : "block" }}>
+        <Box
+          sx={{
+            display: hideBotNameInputs ? "none" : "block",
+            backgroundImage: `url(${RoboWavingImage})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
+            minHeight: "80vh",
+          }}
+        >
           <Grid item xs={12} style={{ textAlign: "center", marginTop: "20px" }}>
             <TextField
               label="Enter a name for your bot"
               variant="standard"
-              sx={{ width: "50%" }}
+              sx={{ width: "40%" }}
               error={error && !botName}
               onChange={(e) => setBotName(e.target.value)}
               helperText={error && !botName ? error : ""}
@@ -538,7 +542,7 @@ function BuildAutomation() {
             <Button
               variant="contained"
               color="primary"
-              style={{ margin: "3px" }}
+              style={{ marginTop: "20px" }}
               onClick={handleBotNameBtnClick}
             >
               continue

@@ -33,7 +33,7 @@ function App() {
       }}
     >
       <Grid container spacing={1}>
-      <ParticlesBg type="cobweb" bg={true} color="#bdf0ec" />
+      <ParticlesBg type="cobweb" bg={true} color="#32b5ed" />
 
         <Grid item xs={12}>
           <Typography
