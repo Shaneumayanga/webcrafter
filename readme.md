@@ -1,5 +1,10 @@
 # Project Setup Guide
 
+
+## Using docker
+
+`docker compose up`
+
 ## Introduction
 
 This project consists of separate backend and frontend components. The backend is located in the project root, while the frontend is in the /frontend folder.
