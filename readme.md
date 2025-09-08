@@ -7,6 +7,11 @@
 
 ## Introduction
 
+<img width="776" height="640" alt="Screenshot 2025-09-08 at 17 33 45" src="https://github.com/user-attachments/assets/5a01973b-a422-4a2a-a27e-42ed6f440bc3" />
+
+<img width="900" height="616" alt="Screenshot 2025-09-08 at 17 35 06" src="https://github.com/user-attachments/assets/5a38fc25-c8fe-447f-97f2-02324509cf51" />
+
+
 This project consists of separate backend and frontend components. The backend is located in the project root, while the frontend is in the /frontend folder.
 
 ## Backend Setup
