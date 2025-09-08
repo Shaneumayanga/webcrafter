@@ -9,9 +9,16 @@
 
 This is a pet project that I built to play around with Puppeteer; it's basically a "step-by-step" automation builder with a UI that runs on Puppeteer.
 
-<img width="776" height="640" alt="Screenshot 2025-09-08 at 17 33 45" src="https://github.com/user-attachments/assets/5a01973b-a422-4a2a-a27e-42ed6f440bc3" />
+<img width="1440" height="642" alt="Screenshot 2025-09-08 at 21 18 55" src="https://github.com/user-attachments/assets/bd3220f5-855d-40fd-98fc-b8840802d7a9" />
 
-<img width="900" height="616" alt="Screenshot 2025-09-08 at 17 35 06" src="https://github.com/user-attachments/assets/5a38fc25-c8fe-447f-97f2-02324509cf51" />
+<img width="1439" height="637" alt="Screenshot 2025-09-08 at 21 20 23" src="https://github.com/user-attachments/assets/bfee2b3c-cbc3-438e-99c3-95fc6d37b436" />
+
+ <img width="1433" height="630" alt="Screenshot 2025-09-08 at 21 20 48" src="https://github.com/user-attachments/assets/1cc076a4-c94d-4e5d-bba8-4f616e8e7678" />
+
+<img width="1434" height="632" alt="Screenshot 2025-09-08 at 21 21 18" src="https://github.com/user-attachments/assets/c7287d93-be78-4ed0-bbb2-1c980b7ac3a2" />
+
+<img width="1439" height="637" alt="Screenshot 2025-09-08 at 21 21 27" src="https://github.com/user-attachments/assets/03d41922-e15c-452e-9e88-330dccaaf2b5" />
+
 
 
 This project consists of separate backend and frontend components. The backend is located in the project root, while the frontend is in the /frontend folder.
