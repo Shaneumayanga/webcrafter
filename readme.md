@@ -7,6 +7,8 @@
 
 ## Introduction
 
+This is a pet project that I built to play around with Puppeteer; it's basically a "step-by-step" automation builder with a UI that runs on Puppeteer.
+
 <img width="776" height="640" alt="Screenshot 2025-09-08 at 17 33 45" src="https://github.com/user-attachments/assets/5a01973b-a422-4a2a-a27e-42ed6f440bc3" />
 
 <img width="900" height="616" alt="Screenshot 2025-09-08 at 17 35 06" src="https://github.com/user-attachments/assets/5a38fc25-c8fe-447f-97f2-02324509cf51" />
