@@ -2,3 +2,4 @@
 /frontend/node_modules
 /uploads
 /.DS_STORE
+.env
